@@ -1,0 +1,18 @@
+# osa-testcodes
+The OpenSHMEM Analyzer test codes
+
+These programs are intentionally broken in various ways so that either
+the configure option --enable-debug or the OpenSHMEM Analyzer can detect
+the problems.
+
+Compile each of the codes with the command:
+uhcc -shmem-analyzer test-code.c
+This will automaticaly invoke the OpenSHMEM analyzer.
+
+The OpenSHMEM Analyzer Tool itself is available either as a pre-built executable, OpenUH version 3.0.38, or as source:
+OpenSHMEM Analyzer Tool at http://web.cs.uh.edu/~openuh/download/
+
+To report issues with the Analyzer Tool or suggest enhancements, please visit
+OpenSHMEM Analyzer Tool Redmine at:
+http://www.openshmem.org/redmine
+
