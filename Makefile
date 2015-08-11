@@ -42,10 +42,10 @@
 CC=uhcc
 CFLAGS=-shmem-analyzer
 
-SOURCES= badget.c badput.c multi-init.c mypefail.c mype_noret.c test-alias.c 
-test-barrier-matching1.c test-barrier-matching2.c test-init.c 
-test-init-interproc.c test-iput.c test-shmem_heap.c test-startpes.c 
-test-symmetric2.c test-bounds-constprog.c test-bounds.c test-shmem_heap-global.c
+SOURCES= badget.c badput.c multi-init.c mypefail.c mype_noret.c test-alias.c \
+test-barrier-matching1.c test-barrier-matching2.c test-init.c \
+test-init-interproc.c test-iput.c test-shmem_heap.c test-startpes.c \
+test-symmetric2.c test-bounds-constprog.c test-bounds.c test-shmem_heap-global.c \
 test-startpes-ipa.c test-symmetric.c test-types.c
 
 OBJECTS=$(SOURCES:.c=.o)
@@ -55,6 +55,8 @@ all: $(OBJECTS)
 .c.o:
 	$(CC) $(CFLAGS) $<
 
+#test-bounds-constprog.o: test-bounds-constprog.c
+#	$(CC) $(CFLAGS) -O3  test-bounds-constprog.c
 
 clean: $(OBJECTS)
 	rm -rf *.o *.dot *.html *.msg a.out*
